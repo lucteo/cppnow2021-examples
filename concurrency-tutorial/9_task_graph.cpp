@@ -1,4 +1,4 @@
-#include <concore/conc_scan.hpp>
+#include <concore/task_graph.hpp>
 #include <concore/finish_task.hpp>
 
 #include "../common/utils.hpp"
@@ -35,10 +35,6 @@ struct request_data {
 };
 
 using request_ptr = std::shared_ptr<request_data>;
-
-request_ptr create_request_data() {
-    return std::make_shared<request_data>();
-}
 
 void read_http_request(request_ptr req) {
     CONCORE_PROFILING_FUNCTION();
