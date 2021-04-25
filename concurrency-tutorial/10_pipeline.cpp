@@ -92,7 +92,7 @@ int main() {
     for (int i = 0; i < 40; i++)
         my_pipeline.push(frame_data{i});
 
-    // Wait until we've finished everyhing
+    // Wait until we've finished everything
     concore::wait(grp);
 
     return 0;
