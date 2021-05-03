@@ -7,11 +7,6 @@
 #include <vector>
 #include <string>
 
-struct data_stream {};
-struct parsed_body {};
-struct request_handling_resources {};
-struct response_data {};
-
 struct frame_data {
     int frame_idx_{0};
     int stage_{0};
@@ -27,7 +22,7 @@ void parse_frame(frame_data& frm) {
     CONCORE_PROFILING_FUNCTION();
     CONCORE_PROFILING_SET_TEXT_FMT(32, "%d", frm.frame_idx_);
     sleep_in_between_ms(20, 40);
-    printf("%d: prarse\n", frm.frame_idx_);
+    printf("%d: parse\n", frm.frame_idx_);
     assert(frm.stage_ == 0);
     frm.stage_++;
 }

@@ -5,7 +5,7 @@ clean:
 	rm -f *.o *.out *~ core
 
 CC=clang++
-CXXFLAGS=-std=c++17
+CXXFLAGS=-std=c++17 
 LDFLAGS=-stdlib=libc++ -lconcore
 
 ifeq ($(PROFILING), YES)
